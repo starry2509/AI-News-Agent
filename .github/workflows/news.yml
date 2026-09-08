@@ -3,7 +3,7 @@ name: AI News Pipeline
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 21 * * *'
+    - cron: '0 21 * * *'   # UTC 21:00 = 北京时间次日 5:00
 
 jobs:
   run-news-agent:
@@ -32,6 +32,14 @@ jobs:
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
           POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+
+      # ========== 新增：自动清理旧报告 ==========
+      - name: Clean old reports
+        run: |
+          cd output
+          # 保留最新的 7 个 .md 报告，删除其余
+          ls -t ai-daily-*.md 2>/dev/null | tail -n +8 | xargs rm -f || true
+      # ========================================
 
       - name: Upload Reports
         uses: actions/upload-artifact@v4
