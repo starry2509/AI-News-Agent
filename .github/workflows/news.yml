@@ -3,7 +3,7 @@ name: AI News Pipeline
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 21 * * *'
 
 jobs:
   run-news-agent:
