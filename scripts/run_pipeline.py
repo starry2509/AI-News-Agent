@@ -15,12 +15,6 @@ from src.graph.workflow import compile_graph
 def _default_sources() -> list[str]:
     """根据配置动态决定启用哪些数据源"""
     sources = ["reddit", "hackernews", "github", "huggingface"]
-    # Twitter：有 Firecrawl 或 Twitter API key 才启用
-    if settings.firecrawl_api_key or settings.twitter_api_key:
-        sources.append("twitter")
-    # Product Hunt：有 API token 才启用
-    if settings.producthunt_api_token:
-        sources.append("producthunt")
     return sources
 
 
