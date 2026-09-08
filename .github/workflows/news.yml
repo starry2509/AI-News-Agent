@@ -16,13 +16,16 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Poetry
+        run: pip install poetry
+
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          poetry install
           playwright install --with-deps chromium
 
       - name: Run News Agent
-        run: python scripts/run_pipeline.py
+        run: poetry run python scripts/run_pipeline.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
