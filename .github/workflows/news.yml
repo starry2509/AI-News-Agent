@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install --no-root
-          playwright install --with-deps chromium
+          poetry run playwright install --with-deps chromium
 
       - name: Run News Agent
         run: poetry run python scripts/run_pipeline.py
