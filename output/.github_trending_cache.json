@@ -1,19 +1,4 @@
 {
-  "2026-09-04": [
-    "google-research/timesfm",
-    "DietrichGebert/ponytail",
-    "debpalash/VoiceStudio",
-    "ChromeDevTools/chrome-devtools-mcp",
-    "NousResearch/hermes-agent",
-    "superlinked/sie",
-    "pacifio/atlas",
-    "Imbad0202/academic-research-skills",
-    "affaan-m/ECC",
-    "blader/humanizer",
-    "JuliusBrussee/caveman",
-    "mattpocock/skills",
-    "Gitlawb/openclaude"
-  ],
   "2026-09-05": [
     "mattpocock/skills",
     "NousResearch/hermes-agent",
@@ -58,5 +43,22 @@
     "blader/humanizer",
     "WorldFlowAI/everything-claude-code",
     "magnitudedev/magnitude"
+  ],
+  "2026-09-08": [
+    "affaan-m/ECC",
+    "mattpocock/skills",
+    "cathrynlavery/diagram-design",
+    "NousResearch/hermes-agent",
+    "openai/skills",
+    "anomalyco/opencode",
+    "blader/humanizer",
+    "DietrichGebert/ponytail",
+    "ruvnet/ruflo",
+    "magnitudedev/magnitude",
+    "coreyhaines31/marketingskills",
+    "aipoch/open-science",
+    "OpenWhispr/openwhispr",
+    "humanlayer/skills",
+    "The-Swarm-Corporation/AutoHedge"
   ]
 }
